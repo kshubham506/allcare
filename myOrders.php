@@ -39,6 +39,12 @@
                 z-index: 9999;
                 background: url('includes/image/eclipse.gif') 50% 50% no-repeat rgb(249,249,249);
             }
+            
+            .card1{
+                 border-radius: 20px;
+                box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); 
+
+            }
         </style>
         
         
@@ -227,8 +233,33 @@
             <div class="col-12 text-center"  ng-if="status!=1" >
                 <p>You have not placed any order yet.</p>
             </div>
+            
+            
             <div class="col-12"  ng-if="status==1" ng-repeat="address in addresses">
-                {{address}}    {{products[$index]}}
+                <div class="card1" style="margin:10px;padding:5px">
+                    <div class ="row align-items-center">
+                    <div class="d-none d-md-block col-md-3">
+                        <img ng-src="includes/image/{{products[$index].image}}"  style="width:100%; overflow: hidden;" >
+                    </div>
+                    
+                    <div class="col-5">
+                        <h4>{{products[$index].name}}</h4>
+                        <p>{{products[$index].location}}</p>
+                        <p>{{products[$index].rate}}</p>
+                        
+                        <p><b>Ordered For :</b> {{address.name}}
+                        <br>
+                        {{address.add1}},{{address.add2}},{{address.city}}
+                        <br>
+                        {{address.pin}},{{address.state}}
+                        </p>
+                    </div>
+                    
+                    <div class="col-4 align-self-center">
+                        <b>Order Id : </b>{{}}
+                    </div>
+                </div>
+                </div>
             </div>  
         </div>    
     </div>

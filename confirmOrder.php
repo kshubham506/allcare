@@ -39,6 +39,12 @@
                 z-index: 9999;
                 background: url('includes/image/eclipse.gif') 50% 50% no-repeat rgb(249,249,249);
             }
+            
+        .card1{
+                 border-radius: 20px;
+                box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1); 
+
+            }
         </style>
         
         
