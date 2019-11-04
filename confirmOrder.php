@@ -216,37 +216,42 @@
                     </div>
                 </div>    
             </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-7 card text-center"  style="width: 180rem;background-color:#F7F7F7">
 
-             <div class="container" style="margin-top:25px">
-                <div class="row">
+                         <div class="container" style="margin-top:25px">
+                            <div class="row">
 
-                    <div class="col-12 text-center">
-                        <h4>You are placing an order to <span style="color:blue"> {{product.name}} </span></h4>
-                    </div>
+                                <div class="col-12 text-center">
+                                    <h4>You are placing an order to <span style="color:blue"> {{product.name}} </span></h4>
+                                </div>
 
-                    <div class="container col-12 text-center">
-                        <div class=" row  ">
-                            <div class="col-6 text-center">
-                                Address
-                            </div>
-                            <div class="col-6 text-center">
-                                Address
+                                <div class="container col-12 text-center">
+                                    <div class=" row justify-content-center ">
+                                       
+                                        <div class="col-6 text-center">
+                                            {{address.name}} , {{address.phone}} , {{address.pin}} , {{address.add1}}<br>
+                                            {{address.add2}} , {{address.landmark}}<br>
+                                            {{address.city}} , {{address.state}}
+                                        </div>
+                                    </div>
+                                </div>
+
+                             </div>
+                        </div>
+
+                        <div class="container" style="margin-top:25px">
+                            <div class="row">
+                                <div class="col-12 text-center">
+                                    <p>Arrival By : 15 Novemeber, 2019</p>
+                                </div>
+
+                                <div class="col-12 text-center">
+                                    <p style="color:red">Note : Payment only via COD. </p>
+                                </div>
                             </div>
                         </div>
-                    </div>
-
-                 </div>
-            </div>
-
-            <div class="container" style="margin-top:25px">
-                <div class="row">
-                    <div class="col-12 text-center">
-                        <p>Arrival By : 15 Novemeber, 2019</p>
-                    </div>
-
-                    <div class="col-12 text-center">
-                        <p style="color:red">Note : Payment only via COD. </p>
-                    </div>
                 </div>
             </div>
 

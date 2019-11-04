@@ -251,32 +251,32 @@
 
                     <div class="single-feature">
 
-                        <div class="row justify-content-center">
-                            <div class="col-6 " style="display: inline-block;">
-                                <img src="includes/image/enterprise.jpeg"  style="width:100px; overflow: hidden;" >
+                        <div class="row " style="margin:10px">
+                            <div class="col-12 text-center">
+                                <img ng-src="includes/image/{{carpenter.image}}"  style=" overflow: hidden;" >
                             </div>
                         </div>
 
                         <h3>{{carpenter.name}}</h3>
 
                         <p>
-                           Specializes in Interiors , 15+ years experience.
+                           {{carpenter.desc}}
                         </p>
 
                          <p >
-                            <b>Location  :</b>opps 51 block
+                            <b>Location  :</b> {{carpenter.location}}
                         </p>
                         
                         <p >
-                            <b>Rate :</b>Rs. 100/ hr
+                            <b>Rate :</b> {{carpenter.rate}}
                         </p>
                       
                         <p >
-                            <b>Rating :</b>4.5/5
+                            <b>Rating :</b> {{carpenter.rating}}
                         </p>
                         <br>
-                        <p style="margin: auto;  float:right">
-                            <button ng-click="placeOrder(carpenter)">ORDER</button>
+                        <p style="margin: auto; float:right">
+                            <button type="button" class="btn btn-info " ng-click="placeOrder(carpenter)" >ORDER</button>
                         </p>
 
                     </div>
@@ -306,32 +306,32 @@
 
                     <div class="single-feature">
 
-                        <div class="row justify-content-center">
-                            <div class="col-6 " style="display: inline-block;">
-                                <img src="includes/image/enterprise.jpeg"  style="width:100px; overflow: hidden;" >
+                        <div class="row " style="margin:10px">
+                            <div class="col-12 text-center">
+                                <img ng-src="includes/image/{{electrician.image}}"  style=" overflow: hidden;" >
                             </div>
                         </div>
 
-                        <h3>Sk Enterprises</h3>
+                        <h3>{{electrician.name}}</h3>
 
                         <p>
-                           Specializes in Interiors , 15+ years experience.
+                           {{electrician.desc}}
                         </p>
 
                          <p >
-                            <b>Location  :</b>opps 51 block
+                            <b>Location  :</b> {{electrician.location}}
                         </p>
                         
                         <p >
-                            <b>Rate :</b>Rs. 100/ hr
+                            <b>Rate :</b> {{electrician.rate}}
                         </p>
                       
                         <p >
-                            <b>Rating :</b>4.5/5
+                            <b>Rating :</b> {{electrician.rating}}
                         </p>
                         <br>
-                        <p style="margin: auto;  float:right">
-                            <button>ORDER</button>
+                        <p style="margin: auto; float:right">
+                            <button type="button" class="btn btn-info " ng-click="placeOrder(electrician)" >ORDER</button>
                         </p>
 
                     </div>
@@ -394,14 +394,14 @@
                 $('.carpen').owlCarousel({
                     margin: 10,
                     nav:true,
-                    dots: true,
+                    dots: false,
                     responsiveClass: true,
                     responsive: {
                         0: {
                             items: 1,
                         },
                         768: {
-                            items: 2,
+                            items: 2.2,
                         },
                     }
                 });
@@ -409,14 +409,14 @@
                $('.electrici').owlCarousel({
                     margin: 10,
                     nav:true,
-                    dots: true,
+                   dots:false,
                     responsiveClass: true,
                     responsive: {
                         0: {
                             items: 1,
                         },
                         768: {
-                            items: 2,
+                            items: 2.2,
                         },
                     }
                 });

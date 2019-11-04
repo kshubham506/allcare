@@ -178,12 +178,9 @@
               }
               
               
-              if(k==1){
+              if(k==0){
                   $("#loader").hide();
                   document.getElementById("errormsg").innerHTML=msg;
-                  
-                  
-                  
                   
               }
               else{
@@ -192,8 +189,10 @@
                   console.log("Insert ADdress");
                   
                   $("#loader").show();
+                  
                   const orgSize=$scope.addresses.length;
-                  var abc={"name":"hello122","desc":"nice122"};
+                  
+                  var abc={"name":name,"phone":phone,"pin":pin,"add1":add1,"add2":add2,"land":land,"city":city,"state":state};
                   $scope.addresses.push(abc);
                   console.log(JSON.stringify($scope.addresses));
                   //fetch saved address
@@ -294,14 +293,43 @@
                 <div ng-if="addresses.length==0" class="col">
                     <p >You have not saved any address yet!</p>
                 </div>
-                <div class="col" ng-repeat="address in addresses">
-                    {{address}}
-                    
-                    <div class=" row">
-                        <div class="col-12 ">
-                            <button type="button" class="btn btn-primary btn-sm " ng-click="placeOd(address)" style="padding:7px;" name="sub">ORDER</button>        
-                        </div>
+                
+                <div class="col-4" ng-repeat="address in addresses">
+                    <br><br>
+                     <div class="feature-area single-feature">
+
+                        <h3>{{address.name}}</h3>
+
+                        <p>
+                           Phone : {{address.phone}}
+                        </p>
+
+                         <p >
+                            <b>Pin  :</b> {{address.pin}}
+                        </p>
+                        
+                        <p >
+                             {{address.add1}} , {{address.add2}}
+                        </p>
+                         
+                         <p>
+                            {{address.landmark}}
+                         </p>
+                         
+                         <p>
+                            {{address.city}}, {{address.state}}
+                         </p>
+                      
+                        
+                        <br>
+                        <p style="margin: auto; ">
+                            <button type="button" class="btn btn-info btn-sm " ng-click="placeOd(address)" >SELECT</button>
+                        </p>
+
                     </div>
+                    
+                    
+                    
                 </div>  
                 
             </div>
