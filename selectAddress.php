@@ -258,7 +258,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="Navbar">
                     <ul class="navbar-nav ">
                             <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                            
+                            <li class="nav-item active"><a class="nav-link" onclick="partner()" href="#">Partner With Us</a></li>
                         
                             <li style="display:none" id="loggedin" class="nav-item dropdown">
                                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> 
@@ -458,7 +458,10 @@
     
        <script>
            
-
+            function partner(){
+               alert("Sned us a mail with all your details like business details, rate , specialization etc.");
+               window.open("mailto:3pg3h@ichigo.me","_blank");
+           }
           
            
           

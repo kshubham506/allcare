@@ -206,7 +206,7 @@
                 <div class="collapse navbar-collapse justify-content-end" id="Navbar">
                     <ul class="navbar-nav ">
                             <li class="nav-item active"><a class="nav-link" href="index.php">Home</a></li>
-                            
+                            <li class="nav-item active"><a class="nav-link" onclick="partner()" href="#">Partner With Us</a></li>
                         
                             <li style="display:none" id="loggedin" class="nav-item dropdown">
                                  <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="true"> 
@@ -269,7 +269,7 @@
 
                         <div class="row " style="margin:10px">
                             <div class="col-12 text-center">
-                                <img ng-src="includes/image/{{carpenter.image}}"  style=" overflow: hidden;" >
+                                <img ng-src="includes/image/{{carpenter.image}}"  style=" max-height:200px;overflow: hidden;" >
                             </div>
                         </div>
 
@@ -324,7 +324,7 @@
 
                         <div class="row " style="margin:10px">
                             <div class="col-12 text-center">
-                                <img ng-src="includes/image/{{electrician.image}}"  style=" overflow: hidden;" >
+                                <img ng-src="includes/image/{{electrician.image}}"  style="max-height:200px; overflow: hidden;" >
                             </div>
                         </div>
 
@@ -381,7 +381,7 @@
 
                         <div class="row " style="margin:10px">
                             <div class="col-12 text-center">
-                                <img ng-src="includes/image/{{plumber.image}}"  style=" overflow: hidden;" >
+                                <img ng-src="includes/image/{{plumber.image}}"  style="max-height:200px; overflow: hidden;" >
                             </div>
                         </div>
 
@@ -556,6 +556,11 @@
                   // An error happened.
                    $("#loader").hide();
                 });
+           }
+           
+           function partner(){
+               alert("Sned us a mail with all your details like business details, rate , specialization etc.");
+               window.open("mailto:3pg3h@ichigo.me","_blank");
            }
            
            
