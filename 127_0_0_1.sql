@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 07, 2019 at 10:22 AM
+-- Generation Time: Nov 07, 2019 at 05:15 PM
 -- Server version: 10.1.35-MariaDB
 -- PHP Version: 7.2.9
 
@@ -59,7 +59,7 @@ CREATE TABLE `carpenters` (
 --
 
 INSERT INTO `carpenters` (`sno`, `data`) VALUES
-(1, '[{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10+ years of experience.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"},{\"image\":\"carpenter.jpg\",\"name\":\"Goldi Wood Works\",\"desc\":\"Think Wood, Think Goldi.\",\"location\":\"Mittu Basti Road, Dream World\",\"rate\":\"Rs 350/hr \",\"rating\":\"4.1/5\"},{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10+ years of experience.\",\"location\":\"Shop 8 , New arket, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"}]');
+(1, '[{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10+ years of experience.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"},{\"image\":\"carpenter2.jpg\",\"name\":\"Goldi Wood Works\",\"desc\":\"Think Wood, Think Goldi.\",\"location\":\"Mittu Basti Road, Dream World\",\"rate\":\"Rs 350/hr \",\"rating\":\"4.1/5\"},{\"image\":\"carpenter3.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10+ years of experience.\",\"location\":\"Shop 8 , New arket, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"}]');
 
 -- --------------------------------------------------------
 
@@ -77,7 +77,7 @@ CREATE TABLE `electrician` (
 --
 
 INSERT INTO `electrician` (`sno`, `data`) VALUES
-(1, '[{\"image\":\"electrician.jpg\",\"name\":\"Sai Electrician\",\"desc\":\"We undertake all type of electric works.\",\"location\":\"Sneaky Street ,Bumingham\",\"rate\":\"Rs 200/hr \",\"rating\":\"4.5/5\"},{\"image\":\"electrician.jpg\",\"name\":\"Sukhvir Electrical\",\"desc\":\"Work like no one else.\",\"location\":\"Solomon St., Sabinis\",\"rate\":\"Rs 400/hr \",\"rating\":\"4.1/5\"},{\"image\":\"electrician.jpg\",\"name\":\"Rimpi Elctroworld\",\"desc\":\"Customer satisfaction is our top priority.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"}]');
+(1, '[{\"image\":\"electrician.jpg\",\"name\":\"Sai Electrician\",\"desc\":\"We undertake all type of electric works.\",\"location\":\"Sneaky Street ,Bumingham\",\"rate\":\"Rs 200/hr \",\"rating\":\"4.5/5\"},{\"image\":\"electrician2.jpg\",\"name\":\"Sukhvir Electrical\",\"desc\":\"Work like no one else.\",\"location\":\"Solomon St., Sabinis\",\"rate\":\"Rs 400/hr \",\"rating\":\"4.1/5\"},{\"image\":\"electrician3.jpg\",\"name\":\"Rimpi Elctroworld\",\"desc\":\"Customer satisfaction is our top priority.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"}]');
 
 -- --------------------------------------------------------
 
@@ -100,7 +100,9 @@ INSERT INTO `orders` (`time`, `uid`, `product`, `address`) VALUES
 (1572894131, 'qnfn0qBoncXRsgviRqEgvQmnCug1', '{\"image\":\"electrician.jpg\",\"name\":\"Sukhvir Electrical\",\"desc\":\"Work like no one else.\",\"location\":\"Solomon St., Sabinis\",\"rate\":\"Rs 400/hr \",\"rating\":\"4.1/5\",\"$$hashKey\":\"object:10\"}', '{\"name\":\"Shubham Kumar\",\"phone\":\"7033265522\",\"pin\":\"828207\",\"add1\":\"Qtr TWB 10a\",\"add2\":\"\",\"land\":\"jdshjkl\",\"city\":\"vbnm,.\",\"state\":\"fgbnm,.\",\"$$hashKey\":\"object:3\"}'),
 (1572895605, 'qnfn0qBoncXRsgviRqEgvQmnCug1', '{\"image\":\"electrician.jpg\",\"name\":\"Sai Electrician\",\"desc\":\"We undertake all type of electric works.\",\"location\":\"Sneaky Street ,Bumingham\",\"rate\":\"Rs 200/hr \",\"rating\":\"4.5/5\",\"$$hashKey\":\"object:9\"}', '{\"name\":\"wertyuio\",\"phone\":\"7903856844\",\"pin\":\"144411\",\"add1\":\"qwertyuio\",\"add2\":\"ertyujkl\",\"land\":\"wertyukil\",\"city\":\"ertyujkil\",\"state\":\"ertyukl;\",\"$$hashKey\":\"object:4\"}'),
 (1572895622, 'qnfn0qBoncXRsgviRqEgvQmnCug1', '{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10  years of experience.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\",\"$$hashKey\":\"object:3\"}', '{\"name\":\"wertyu\",\"phone\":\"9431514622\",\"pin\":\"144411\",\"add1\":\"qwertyuio\",\"add2\":\"ertyui\",\"land\":\"rtyuio\",\"city\":\"wertyuiq\",\"state\":\"wertyuiop\",\"$$hashKey\":\"object:5\"}'),
-(1573115630, 'qnfn0qBoncXRsgviRqEgvQmnCug1', '{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10  years of experience.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\",\"$$hashKey\":\"object:3\"}', '{\"name\":\"wertyuio\",\"phone\":\"7903856844\",\"pin\":\"144411\",\"add1\":\"qwertyuio\",\"add2\":\"ertyujkl\",\"land\":\"wertyukil\",\"city\":\"ertyujkil\",\"state\":\"ertyukl;\",\"$$hashKey\":\"object:4\"}');
+(1573115630, 'qnfn0qBoncXRsgviRqEgvQmnCug1', '{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10  years of experience.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\",\"$$hashKey\":\"object:3\"}', '{\"name\":\"wertyuio\",\"phone\":\"7903856844\",\"pin\":\"144411\",\"add1\":\"qwertyuio\",\"add2\":\"ertyujkl\",\"land\":\"wertyukil\",\"city\":\"ertyujkil\",\"state\":\"ertyukl;\",\"$$hashKey\":\"object:4\"}'),
+(1573132975, 'qnfn0qBoncXRsgviRqEgvQmnCug1', '{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10  years of experience.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\",\"$$hashKey\":\"object:3\"}', '{\"name\":\"wertyu\",\"phone\":\"9431514622\",\"pin\":\"144411\",\"add1\":\"qwertyuio\",\"add2\":\"ertyui\",\"land\":\"rtyuio\",\"city\":\"wertyuiq\",\"state\":\"wertyuiop\",\"$$hashKey\":\"object:6\"}'),
+(1573136486, 'qnfn0qBoncXRsgviRqEgvQmnCug1', '{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10  years of experience.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\",\"$$hashKey\":\"object:3\"}', '{\"name\":\"Shubham Kumar\",\"phone\":\"7033265522\",\"pin\":\"828207\",\"add1\":\"Qtr TWB 10a\",\"add2\":\"\",\"land\":\"jdshjkl\",\"city\":\"vbnm,.\",\"state\":\"fgbnm,.\",\"$$hashKey\":\"object:3\"}');
 
 -- --------------------------------------------------------
 
@@ -118,7 +120,7 @@ CREATE TABLE `plumbers` (
 --
 
 INSERT INTO `plumbers` (`sno`, `data`) VALUES
-(1, '[{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10+ years of experience.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"},{\"image\":\"carpenter.jpg\",\"name\":\"Goldi Wood Works\",\"desc\":\"Think Wood, Think Goldi.\",\"location\":\"Mittu Basti Road, Dream World\",\"rate\":\"Rs 350/hr \",\"rating\":\"4.1/5\"},{\"image\":\"carpenter.jpg\",\"name\":\"Mani Carpenter House\",\"desc\":\"Specializes in all types of furnitures. 10+ years of experience.\",\"location\":\"Shop 8 , New arket, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"}]');
+(1, '[{\"image\":\"plumbinghouse.jpg\",\"name\":\"Deepak Plumbing House\",\"desc\":\"5+ years in market.\",\"location\":\"Shop 8 , New market, Imaginary World\",\"rate\":\"Rs 300/hr \",\"rating\":\"4.5/5\"},\r\n\r\n{\"image\":\"sonuplumbing.jpg\",\"name\":\"Sonu Plumbers\",\"desc\":\"Think Plumbers, Think Sonu.\",\"location\":\"Mittu Basti Road, Dream World\",\"rate\":\"Rs 350/hr \",\"rating\":\"4.1/5\"}]');
 
 --
 -- Indexes for dumped tables
