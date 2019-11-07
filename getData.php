@@ -104,7 +104,7 @@
         }
         else if($task=="getOrders")
         {
-            $msg=['msg'=>'','status'=>1,'sql'=>'','product'=>[],'address'=>[]];
+            $msg=['msg'=>'','status'=>1,'sql'=>'','product'=>[],'address'=>[],'orderid'=>[]];
             
             
             $sql="select * from orders where uid='$uid' order by time desc;";
@@ -122,6 +122,7 @@
                     {
                         array_push($msg['product'],json_decode($row['product'],true));
                         array_push($msg['address'],json_decode($row['address'],true));
+                        array_push($msg['orderid'],json_decode($row['time'],true));
                     }
                     
                 }else{

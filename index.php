@@ -25,6 +25,7 @@
         <link rel="stylesheet" href="includes/css/main.css">
         <link rel="stylesheet" href="includes/css/owl.carousel.css">
         <link rel="stylesheet" href="includes/css/owl.theme.default.min.css">
+        <link rel="stylesheet" href="includes/js/wow.min.js">
         <!--<link rel="stylesheet" href="includes/slick/slick.css">
         <link rel="stylesheet" href="includes/slick/slick-theme.css">-->
         <link rel="stylesheet" href="includes/css/animate.min.css">        
@@ -93,6 +94,7 @@
                 
                 $scope.carpenters = [];
                 $scope.electricians = [];
+                $scope.plumbers = [];
             
                 var xmlhttp = new XMLHttpRequest();
                  //carpenters
@@ -124,7 +126,21 @@
                         }
 
                        // console.log($scope.electricians);
+                }
+            //plumbers
+                xmlhttp.open("GET", "getData.php?item=plumbers", false);
+                xmlhttp.send();
+                if (xmlhttp.status == 200) {
 
+                        var tok=JSON.parse(JSON.parse(xmlhttp.responseText));
+
+                        for(var i=0;i<tok.length;i++){
+                            delete tok[i]['$$hashKey'];
+                            $scope.plumbers.push(tok[i]);
+                           
+                        }
+
+                       // console.log($scope.electricians);
                 }
               
               
@@ -219,8 +235,8 @@
 				<div class=" container">
 					<div class="row banner_content ">
 						<div class="col-lg-9 " id="banner_text">
-							<h2>One Stop Solution For All Your Needs</h2>
-							<p>Be it carpentry, plumbing, electricity , we have it all.</p>
+							<h2 id="toptext" class="animated  zoomInLeft delay-3s">One Stop Solution For All Your Needs</h2>
+							<p id="belowtext" class="animated  zoomInRight delay-3s">Be it carpentry, plumbing, electricity , we have it all.</p>
 							
 						</div>
 						<div class="col-lg-3 " id="banner_img">
@@ -235,7 +251,7 @@
         
         
     <!--Carpenters -->
-	<section class="feature-area section-gap-top" id="features">
+	<section class="feature-area section-gap-top "   id="features ">
 		<div class="container">
 			<div class="row ">
 				<div class="col-lg-6 offset-0.5">
@@ -275,7 +291,7 @@
                             <b>Rating :</b> {{carpenter.rating}}
                         </p>
                         <br>
-                        <p style="margin: auto; float:right">
+                        <p style="">
                             <button type="button" class="btn btn-info " ng-click="placeOrder(carpenter)" >ORDER</button>
                         </p>
 
@@ -290,7 +306,7 @@
         
         
      <!--Electricains -->
-	<section class="feature-area  section-gap" id="features">
+	<section class="feature-area  " id="features">
 		<div class="container">
 			<div class="row ">
 				<div class="col-lg-6 offset-0.5">
@@ -330,7 +346,7 @@
                             <b>Rating :</b> {{electrician.rating}}
                         </p>
                         <br>
-                        <p style="margin: auto; float:right">
+                        <p style="">
                             <button type="button" class="btn btn-info " ng-click="placeOrder(electrician)" >ORDER</button>
                         </p>
 
@@ -345,6 +361,62 @@
 	</section>
 	<!-- End vElectricains Area -->    
         
+        
+    <!--Plumbers-->
+	<section class="feature-area " id="features">
+		<div class="container">
+			<div class="row ">
+				<div class="col-lg-6 offset-0.5">
+					<div class="section-title ">
+						<h4>Plumbers</h4>
+					</div>
+				</div>
+			</div>
+            
+            <div class="plumbi row owl-carousel owl-theme" style="margin-top: 10px;">
+
+                <div style="margin-bottom: 50px;margin-left: 20px;" ng-repeat="plumber in plumbers" >
+
+                    <div class="single-feature">
+
+                        <div class="row " style="margin:10px">
+                            <div class="col-12 text-center">
+                                <img ng-src="includes/image/{{plumber.image}}"  style=" overflow: hidden;" >
+                            </div>
+                        </div>
+
+                        <h3>{{plumber.name}}</h3>
+
+                        <p>
+                           {{plumber.desc}}
+                        </p>
+
+                         <p >
+                            <b>Location  :</b> {{plumber.location}}
+                        </p>
+                        
+                        <p >
+                            <b>Rate :</b> {{plumber.rate}}
+                        </p>
+                      
+                        <p >
+                            <b>Rating :</b> {{plumber.rating}}
+                        </p>
+                        <br>
+                        <p style="">
+                            <button type="button" class="btn btn-info " ng-click="placeOrder(electrician)" >ORDER</button>
+                        </p>
+
+                    </div>
+                </div>
+
+        </div>
+        
+               
+          
+		</div>
+	</section>
+	<!-- End vElectricains Area --> 
         
         
     <!-- Start Footer Area -->
@@ -386,14 +458,21 @@
                         var $nav = $(".navbar");
                         $nav.toggleClass('navbar-scroll', $(this).scrollTop() > $nav.height());
                     });
+                
+                
             }); 
 
+           setTimeout(function(){
+                      //      $("#toptext").hide();
+                },2000);
+           
+           
            //loading cards
           
            setTimeout(function(){
                 $('.carpen').owlCarousel({
                     margin: 10,
-                    nav:true,
+                    nav:false,
                     dots: false,
                     responsiveClass: true,
                     responsive: {
@@ -408,7 +487,22 @@
                
                $('.electrici').owlCarousel({
                     margin: 10,
-                    nav:true,
+                    nav:false,
+                   dots:false,
+                    responsiveClass: true,
+                    responsive: {
+                        0: {
+                            items: 1,
+                        },
+                        768: {
+                            items: 2.2,
+                        },
+                    }
+                });
+               
+               $('.plumbi').owlCarousel({
+                    margin: 10,
+                    nav:false,
                    dots:false,
                     responsiveClass: true,
                     responsive: {
@@ -422,6 +516,8 @@
                 });
                
                },500);     
+           
+           
            
                
                 

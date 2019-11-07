@@ -122,6 +122,7 @@
         
             $scope.addresses = []; 
             $scope.products = []; 
+            $scope.orderids = []; 
             $scope.status=0;
             //fetch orders
             jQuery.ajax({
@@ -133,12 +134,18 @@
                     $scope.status=tok.status;
                     if(tok.status==1)
                         {
-                            var pdt=tok.product;var addr=tok.address;
+                            var pdt=tok.product;
+                            var addr=tok.address;
+                            var orderid=tok.orderid;
+                            
                              for(var i=0;i<pdt.length;i++){
                                 delete pdt[i]['$$hashKey'];
                                 $scope.products.push(pdt[i]);
                                  delete addr[i]['$$hashKey'];
                                 $scope.addresses.push(addr[i]);
+                                 
+                                 delete orderid[i]['$$hashKey'];
+                                $scope.orderids.push(orderid[i]);
                             }
                             console.log($scope.addresses);
                             console.log($scope.products);
@@ -256,7 +263,7 @@
                     </div>
                     
                     <div class="col-4 align-self-center">
-                        <b>Order Id : </b>{{}}
+                        <b>Order Id : </b>{{orderids[$index]}}
                     </div>
                 </div>
                 </div>
